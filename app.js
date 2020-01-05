@@ -1,18 +1,14 @@
-// es6 规范
-import sum from './vendor/sum'
-console.log("sum(1,2)=",sum(1,2));
+// 全局引入
+// import '@babel/polyfill'
 
+// 测试 ES6 语法是否通过 babel 转译
+const array = [1, 2, 3]
+const isES6 = () => console.log(...array)
 
-// commonjs 规范
-var minus = require("./vendor/minus")
-console.log("minus(1,2)=",minus)
+isES6()
 
+const arr = [new Promise(() => {}), new Promise(() => {})]
 
-// amd 规范
-// amd 规范导入的文件会额外打包成一个js文件
-
-// require(['./vendor/multi'],function(multi){
-//     console.log("multi(1,2)=",multi(1,2))
-// })
-
-
+arr.map(item => {
+  console.log(item)
+})
