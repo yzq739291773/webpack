@@ -7,7 +7,7 @@ module.exports = {
     },
     output:{
         // js 引用路径或者cdn地址
-        publicPath:__dirname + '/dist',
+        publicPath:__dirname + '/dist/',
         // 打包文件的输出目录
         path:path.resolve(__dirname,'dist'),
         // 打包后生成的jsw文件
