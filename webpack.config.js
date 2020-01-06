@@ -26,6 +26,13 @@ module.exports = {
               loader: MiniCssExtractPlugin.loader
             },
             'css-loader',
+             // 使用 postcss 为 css 加上浏览器前缀
+            {
+              loader: 'postcss-loader',
+              options: {
+                plugins: [require('autoprefixer')]
+              }
+            },
             'sass-loader' // 使用 sass-loader 将 scss 转为 css
           ]
         }
