@@ -1,9 +1,6 @@
 $bgColor: black !default;
-*,
-body {
-  margin: 0;
-  padding: 0;
-}
+@import "../css/base.css";
+
 html {
   background-color: $bgColor;
 }
