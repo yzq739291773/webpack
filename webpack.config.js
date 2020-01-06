@@ -20,12 +20,13 @@ module.exports = {
     module: {
       rules: [
         {
-          test: /\.css$/, // 针对 .css 后缀的文件设置 loader
+          test: /\.(scss|css)$/, // 针对 .scss 或者 .css 后缀的文件设置 loader
           use: [
             {
               loader: MiniCssExtractPlugin.loader
             },
-            'css-loader'
+            'css-loader',
+            'sass-loader' // 使用 sass-loader 将 scss 转为 css
           ]
         }
       ]

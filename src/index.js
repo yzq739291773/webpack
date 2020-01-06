@@ -1,1 +1,2 @@
-import style from './css/base.css'
+import './css/base.css'
+import './scss/main.scss'
