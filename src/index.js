@@ -1,13 +1,13 @@
-// 异步代码
-import(/* webpackChunkName: 'a'*/ './a').then(function(a) {
-    console.log(a)
+import(/* webpackChunkName: 'subPageA'*/ './subPageA').then(function(subPageA) {
+    console.log(subPageA)
   })
   
-  import(/* webpackChunkName: 'b'*/ './b').then(function(b) {
-    console.log(b)
+  import(/* webpackChunkName: 'subPageB'*/ './subPageB').then(function(subPageB) {
+    console.log(subPageB)
   })
   
-  import(/* webpackChunkName: 'use-lodash'*/ 'lodash').then(function(_) {
+  import(/* webpackChunkName: 'lodash'*/ 'lodash').then(function(_) {
     console.log(_.join(['1', '2']))
   })
   
+  export default 'page'
