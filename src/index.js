@@ -1,13 +1,7 @@
-// 异步代码
-import(/* webpackChunkName: 'a'*/ './a').then(function(a) {
-    console.log(a)
+document.addEventListener('click', () => {
+  import(/* webpackPrefetch: true */ './click.js').then(({ default: func }) => {
+    func()
   })
-  
-  import(/* webpackChunkName: 'b'*/ './b').then(function(b) {
-    console.log(b)
-  })
-  
-  import(/* webpackChunkName: 'use-lodash'*/ 'lodash').then(function(_) {
-    console.log(_.join(['1', '2']))
-  })
-  
+})
+
+// Prefetch 会等待核心代码加载完之后，有空闲之后再去加载。Preload 会和核心的代码并行加载，还是不推荐
